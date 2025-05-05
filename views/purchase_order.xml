@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Localizar el div con clase oe_title para agregar el campo version -->
+            <xpath expr="//div[@class='oe_title']/h1" position="inside">
+                <h4>
+                    <span>Version: </span>
+                    <field name="version" readonly="1" class="d-inline ms-2"/>
+                </h4>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -20,10 +20,11 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['purchase'],
+    'depends': ['purchase','web_studio','purchase_requisition'],
 
     'data':[
         'views/purchase_history_views.xml',
+        'views/purchase_order.xml',
         'security/ir.model.access.csv'
     ]
 }
