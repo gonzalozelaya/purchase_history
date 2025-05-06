@@ -12,6 +12,17 @@
                     <field name="version" readonly="1" class="d-inline ms-2"/>
                 </h4>
             </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Historial de cambios">
+                    <field name="history_ids">
+                        <tree>
+                            <field name="version_name"/>
+                            <field name="user_id"/>
+                            <field name="change_date"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
         </field>
     </record>
 </odoo>
